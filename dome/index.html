@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>t1 - 网页弹窗插件</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="header bgwhite">
+        <div class="container bgwhite">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header_content">
+                        <h1 class="marginBottom10">t1 - 网页弹窗插件</h1>
+                        <p class="marginBottom10 header_js">这是一款面向前端初学者的网页弹窗，只需具备简单的JavaScript基础知识就能修改成属于自己的插件。</p>
+                        <a class="btn btn-default button" href="https://github.com/fengfanv/" role="button" target="_black">关注我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container marginTop13">
+        <div class="row clearfix">
+            <div class="col-md-9 col-xs-12 bgwhite fl">
+                <div class="ct">
+                    <h5 class="marginBottom10">说明</h5>
+                    <div>
+                        <span>1、引入</span>
+                        <div class="code_mine">
+                            <p>
+                                <<span>script src="../js/t_alert.js"</span>><<span>/script</span>>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>2、使用alert方法</span>
+                        <div class="code_mine">
+                            <p>
+                                <span>t.alert(</span>
+                            </p>
+                            <p>
+                                <span>"显示内容"</span>
+                            </p>
+                            <p>
+                                <span>,function(){</span>
+                            </p>
+                            <p>
+                                <span style="margin-left:2em;">alert("单击确定按钮执行的回调方法")</span>
+                            </p>
+                            <p>
+                                <span>})</span>
+                            </p>
+                            <p>
+                                <span>*回调方法选填</span>
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <button class="button1" onclick="showAlert()">显示alert弹窗</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>2、使用confirm方法</span>
+                        <div class="code_mine">
+                            <p>
+                                <span>t.confirm(</span>
+                            </p>
+                            <p>
+                                <span>"显示内容"</span>
+                            </p>
+                            <p>
+                                <span>,function(){</span>
+                            </p>
+                            <p>
+                                <span style="margin-left:2em;">alert("单击确定按钮执行的回调方法")</span>
+                            </p>
+                            <p>
+                                <span>}</span>
+                            </p>
+                            <p>
+                                <span>,function(){</span>
+                            </p>
+                            <p>
+                                <span style="margin-left:2em;">alert("单击取消按钮执行的回调方法")</span>
+                            </p>
+                            <p>
+                                <span>})</span>
+                            </p>
+                            <p>
+                                <span>*回调方法选填</span>
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <button class="button1" onclick="showConfirm()">显示confirm弹窗</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>3、使用loadimg加载过渡窗口方法</span>
+                        <div class="code_mine">
+                            <p>
+                                <span>t.loadimg()</span>
+                            </p>
+                            <p>
+                                <span>*显示loadimg加载过渡窗口按钮已做打开3秒后关闭处理</span>
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <button class="button1" onclick="showLoadimg()">显示loadimg加载过渡窗口</button>
+                        </div>
+                    </div>
+                    <div>
+                        <span>4、关闭alert、confirm、loadimg、alertimg窗口方法</span>
+                        <div class="code_mine">
+                            <p>
+                                <span>t.closeall()</span>
+                            </p>
+                            <p>
+                                <span>*关闭t组件打开的所有弹层</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>5、显示图片弹层窗口方法</span>
+                        <div class="code_mine">
+                            <p>
+                                <span>t.alertimg(</span>
+                            </p>
+                            <p>
+                                <span style="margin-left:2em;">{</span>
+                            </p>
+                            <p>
+                                <span style="margin-left: 4em;">"imgurl":["../images/c.png"] /*图片地址*/</span>
+                            </p>
+                            <p>
+                                <span style="margin-left:2em;">}</span>
+                            </p>
+                            <p>
+                                <span>)</span>
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <button class="button1" onclick="showAlertimg()">显示alertimg图片窗口</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-2 bgwhite fr width23 hidden-xs">
+                <div class="ct">
+                    <h5 class="marginBottom10">版本</h5>
+                    <ul>
+                        <li>
+                            <span>V1.0.0</span>
+                            <span class="version_date">2019-11-07</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="../js/t_alert.js"></script>
+    <script>
+        /*显示alert弹窗*/
+        function showAlert() {
+            t.alert(
+                "显示内容"
+                , function () {
+                    alert("单击确定按钮执行的回调方法")
+                });
+        }
+        /*显示confirm弹窗*/
+        function showConfirm() {
+            t.confirm(
+                "显示内容"
+                , function () {
+                    alert("单击确定按钮执行的回调方法")
+                }
+                , function () {
+                    alert("单击取消按钮执行的回调方法")
+                })
+        }
+        /*显示loadimg加载过渡窗口*/
+        function showLoadimg() {
+            t.loadimg();
+            window.setTimeout(function () {
+                t.closeall();
+            }, 3000)
+        }
+        /*显示showAlertimg图片窗口*/
+        function showAlertimg() {
+            t.alertimg(
+                {
+                    "imgurl": ["../images/c.png"]
+                }
+            );
+        }
+    </script>
+</body>
+
+</html>
