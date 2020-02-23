@@ -82,3 +82,6 @@ body {
 .buttons{
     margin-bottom: 10px;
 }
+.min_header{
+    line-height: 36px;
+}

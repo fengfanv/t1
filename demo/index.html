@@ -18,8 +18,10 @@
                 <div class="col-md-12">
                     <div class="header_content">
                         <h1 class="marginBottom10">t1 - 网页弹窗插件</h1>
-                        <p class="marginBottom10 header_js">这是一款面向前端初学者的网页弹窗，只需具备简单的JavaScript基础知识就能修改成属于自己的插件。</p>
-                        <a class="btn btn-default button" href="https://github.com/fengfanv/" role="button" target="_black">关注我</a>
+                        <p class="marginBottom10 header_js">
+                            这是一款简单的JavaScript网页弹窗，在使用方便同时只需具备简单的JavaScript基础知识就能修改成属于自己的插件。</p>
+                        <a class="btn btn-default button" href="https://github.com/fengfanv/" role="button"
+                            target="_black">关注我</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +33,7 @@
                 <div class="ct">
                     <h5 class="marginBottom10">说明</h5>
                     <div>
-                        <span>1、引入</span>
+                        <span class="min_header">1、引入</span>
                         <div class="code_mine">
                             <p>
                                 <<span>script src="../js/t_alert.js"</span>><<span>/script</span>>
@@ -39,7 +41,7 @@
                         </div>
                     </div>
                     <div>
-                        <span>2、使用alert方法</span>
+                        <span class="min_header">2、使用alert方法</span>
                         <div class="code_mine">
                             <p>
                                 <span>t.alert(</span>
@@ -65,7 +67,7 @@
                         </div>
                     </div>
                     <div>
-                        <span>2、使用confirm方法</span>
+                        <span class="min_header">3、使用confirm方法</span>
                         <div class="code_mine">
                             <p>
                                 <span>t.confirm(</span>
@@ -100,24 +102,24 @@
                         </div>
                     </div>
                     <div>
-                        <span>3、使用loadimg加载过渡窗口方法</span>
+                        <span class="min_header">4、使用loadImg加载过渡窗口方法</span>
                         <div class="code_mine">
                             <p>
-                                <span>t.loadimg()</span>
+                                <span>t.loadImg()</span>
                             </p>
                             <p>
-                                <span>*显示loadimg加载过渡窗口按钮已做打开3秒后关闭处理</span>
+                                <span>*显示loadImg加载过渡窗口按钮已做打开3秒后关闭处理</span>
                             </p>
                         </div>
                         <div class="buttons">
-                            <button class="button1" onclick="showLoadimg()">显示loadimg加载过渡窗口</button>
+                            <button class="button1" onclick="showLoadimg()">显示loadImg加载过渡窗口</button>
                         </div>
                     </div>
                     <div>
-                        <span>4、关闭alert、confirm、loadimg、alertimg窗口方法</span>
+                        <span class="min_header">5、关闭alert、confirm、loadImg、alertImg窗口方法</span>
                         <div class="code_mine">
                             <p>
-                                <span>t.closeall()</span>
+                                <span>t.closeAll()</span>
                             </p>
                             <p>
                                 <span>*关闭t组件打开的所有弹层</span>
@@ -125,10 +127,10 @@
                         </div>
                     </div>
                     <div>
-                        <span>5、显示图片弹层窗口方法</span>
+                        <span class="min_header">6、显示图片弹层窗口方法</span>
                         <div class="code_mine">
                             <p>
-                                <span>t.alertimg(</span>
+                                <span>t.alertImg(</span>
                             </p>
                             <p>
                                 <span style="margin-left:2em;">{</span>
@@ -159,6 +161,10 @@
                             <span>V1.0.0</span>
                             <span class="version_date">2019-11-07</span>
                         </li>
+						<li>
+						    <span>V1.0.1</span>
+						    <span class="version_date">2019-01-15</span>
+						</li>
                     </ul>
                 </div>
             </div>
@@ -168,6 +174,25 @@
     </div>
     <script src="../js/t_alert.js"></script>
     <script>
+
+
+
+
+
+
+        //console.log(t);
+
+
+        // for (var i = 0; i <= 1; i++) {
+        //     t.alert(
+        //         "第" + i + "个方法"
+        //         , function (num) {
+                    
+        //             console.log(num);
+        //         }.bind({},i));
+        // }
+
+
         /*显示alert弹窗*/
         function showAlert() {
             t.alert(
@@ -189,20 +214,21 @@
         }
         /*显示loadimg加载过渡窗口*/
         function showLoadimg() {
-            t.loadimg();
+            t.loadImg();
             window.setTimeout(function () {
-                t.closeall();
+                t.closeAll();
             }, 3000)
         }
         /*显示showAlertimg图片窗口*/
         function showAlertimg() {
-            t.alertimg(
+            t.alertImg(
                 {
                     "imgurl": ["../images/c.png"]
                 }
             );
         }
     </script>
+
 </body>
 
 </html>
